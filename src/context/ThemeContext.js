@@ -1,0 +1,31 @@
+// src/context/ThemeContext.js
+"use client";
+import { createContext, useContext } from "react";
+
+const ThemeContext = React.createContext();
+
+// Custom Hook for Theme
+const useTheme = () => {
+  const context = React.useContext(ThemeContext);
+  if (!context) {
+    throw new Error("useTheme must be used within a ThemeProvider");
+  }
+  return context;
+};
+
+// Theme Provider Component
+const ThemeProvider = ({ children }) => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => setDarkMode(!darkMode);
+
+  return (
+    <ThemeContext.Provider value={{ darkMode, toggleDarkMode }}>
+      <div
+        className={`transition-colors duration-500 ${darkMode ? "dark" : ""}`}
+      >
+        {children}
+      </div>
+    </ThemeContext.Provider>
+  );
+};
