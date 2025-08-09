@@ -206,10 +206,11 @@ export default function EnhancedNavbar() {
     <div className="bg-white">
       {/* Enhanced Navigation */}
       <nav
-        className={`fixed w-full z-50 transition-all duration-300 ${scrolled
+        className={`fixed w-full z-50 transition-all duration-300 ${
+          scrolled
             ? "bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm"
             : "bg-white/90 backdrop-blur-sm"
-          }`}
+        }`}
       >
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -259,17 +260,19 @@ export default function EnhancedNavbar() {
                         {getUserDisplayName(userProfile, user)}
                       </span>
                       <ChevronDown
-                        className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${profileDropdownOpen ? "rotate-180" : ""
-                          }`}
+                        className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${
+                          profileDropdownOpen ? "rotate-180" : ""
+                        }`}
                       />
                     </button>
 
                     {/* Dropdown Menu */}
                     <div
-                      className={`absolute right-0 top-full mt-2 w-64 rounded-xl shadow-xl border border-gray-200 bg-white transition-all duration-300 transform origin-top-right ${profileDropdownOpen
+                      className={`absolute right-0 top-full mt-2 w-64 rounded-xl shadow-xl border border-gray-200 bg-white transition-all duration-300 transform origin-top-right ${
+                        profileDropdownOpen
                           ? "opacity-100 scale-100 visible"
                           : "opacity-0 scale-95 invisible"
-                        }`}
+                      }`}
                     >
                       {/* User Info */}
                       <div className="px-4 py-4 border-b border-gray-100">
@@ -314,10 +317,11 @@ export default function EnhancedNavbar() {
                         </a>
                         <a
                           href={isAdmin ? "/admin" : "/dashboard"}
-                          className={`flex items-center space-x-3 px-4 py-3 transition-colors duration-200 ${isAdmin
+                          className={`flex items-center space-x-3 px-4 py-3 transition-colors duration-200 ${
+                            isAdmin
                               ? "text-black hover:bg-gray-50"
                               : "text-gray-700 hover:bg-gray-50"
-                            }`}
+                          }`}
                         >
                           <BarChart3 className="w-4 h-4" />
                           <span>
@@ -376,13 +380,15 @@ export default function EnhancedNavbar() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-40 lg:hidden transition-all duration-500 ease-out ${mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-          }`}
+        className={`fixed inset-0 z-40 lg:hidden transition-all duration-500 ease-out ${
+          mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
       >
         {/* Background */}
         <div
-          className={`absolute inset-0 bg-black transition-all duration-500 ease-out ${mobileMenuOpen ? "opacity-95" : "opacity-0"
-            }`}
+          className={`absolute inset-0 bg-black transition-all duration-500 ease-out ${
+            mobileMenuOpen ? "opacity-95" : "opacity-0"
+          }`}
         />
 
         {/* Menu Content */}
@@ -391,10 +397,11 @@ export default function EnhancedNavbar() {
             {/* User Info for Mobile */}
             {user && (
               <div
-                className={`transform transition-all duration-700 ease-out ${mobileMenuOpen
+                className={`transform transition-all duration-700 ease-out ${
+                  mobileMenuOpen
                     ? "translate-y-0 opacity-100"
                     : "translate-y-10 opacity-0"
-                  }`}
+                }`}
                 style={{
                   transitionDelay: mobileMenuOpen ? "100ms" : "0ms",
                 }}
@@ -425,10 +432,11 @@ export default function EnhancedNavbar() {
             {navItems.map((item, index) => (
               <div
                 key={item.name}
-                className={`transform transition-all duration-700 ease-out ${mobileMenuOpen
+                className={`transform transition-all duration-700 ease-out ${
+                  mobileMenuOpen
                     ? "translate-y-0 opacity-100"
                     : "translate-y-10 opacity-0"
-                  }`}
+                }`}
                 style={{
                   transitionDelay: mobileMenuOpen
                     ? `${(user ? index + 1 : index) * 150 + 200}ms`
@@ -447,14 +455,16 @@ export default function EnhancedNavbar() {
 
             {/* Mobile Auth Section */}
             <div
-              className={`transform transition-all duration-700 ease-out mt-16 space-y-6 ${mobileMenuOpen
+              className={`transform transition-all duration-700 ease-out mt-16 space-y-6 ${
+                mobileMenuOpen
                   ? "translate-y-0 opacity-100"
                   : "translate-y-10 opacity-0"
-                }`}
+              }`}
               style={{
                 transitionDelay: mobileMenuOpen
-                  ? `${(user ? navItems.length + 1 : navItems.length) * 150 + 400
-                  }ms`
+                  ? `${
+                      (user ? navItems.length + 1 : navItems.length) * 150 + 400
+                    }ms`
                   : "0ms",
               }}
             >
@@ -476,10 +486,11 @@ export default function EnhancedNavbar() {
                   </a>
                   <a
                     href={isAdmin ? "/admin" : "/dashboard"}
-                    className={`block text-xl font-semibold transition-colors duration-300 ${isAdmin
+                    className={`block text-xl font-semibold transition-colors duration-300 ${
+                      isAdmin
                         ? "text-white hover:text-gray-300"
                         : "text-white hover:text-gray-300"
-                      }`}
+                    }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {isAdmin ? "Admin Dashboard" : "Dashboard"}

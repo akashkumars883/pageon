@@ -2,20 +2,9 @@
 import React, { useState } from "react";
 import {
   ArrowRight,
-  Mail,
-  Phone,
-  MessageCircle,
-  Globe,
-  Twitter,
-  Facebook,
-  Instagram,
-  Linkedin,
   CheckCircle,
   Sparkles,
   Heart,
-  HeartIcon,
-  HeartCrackIcon,
-  HeartMinus,
 } from "lucide-react";
 
 const FooterSection = () => {
@@ -62,7 +51,7 @@ const FooterSection = () => {
     <footer className="bg-black text-white">
       {/* Newsletter Section */}
       <div className="border-b border-gray-800">
-        <div className="container mx-auto px-6 py-16 max-w-7xl">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 max-w-7xl">
           <div className="max-w-6xl mx-auto text-center">
             <div className="flex items-center justify-center mb-6">
               <div className="flex items-center bg-white/10 backdrop-blur-sm py-2 px-4 rounded-full">
@@ -71,16 +60,15 @@ const FooterSection = () => {
               </div>
             </div>
 
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
-              Get Website Building Tips & Updates
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 px-4 sm:px-0">
+              Join 10,000+ Indian Business Owners
             </h3>
 
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join small business owners getting weekly tips on building
-              successful online presence
+            <p className="text-base sm:text-lg text-gray-300 mb-8 max-w-2xl mx-auto px-4 sm:px-0">
+              Get weekly website tips, digital marketing strategies, and growth hacks specifically for Indian small businesses. From Mumbai to Chennai, learn how successful businesses grow online.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto px-4 sm:px-0">
               <div className="flex-1">
                 <input
                   type="email"
@@ -128,7 +116,7 @@ const FooterSection = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
-        <div className="container mx-auto px-6 py-8 max-w-8xl">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 max-w-7xl">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex flex-col md:flex-row items-center gap-6 text-sm text-gray-400">
               <p>&copy; 2025 Pageon. All rights reserved.</p>

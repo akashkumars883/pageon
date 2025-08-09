@@ -1,0 +1,76 @@
+{
+  "name": "PageOn - Best Website Builder for Indian Businesses",
+  "short_name": "PageOn",
+  "description": "Create professional websites for your Indian business in minutes. No coding required. Perfect for restaurants, shops, services & more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4F46E5",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-IN",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "PageOn Mobile Interface"
+    },
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "PageOn Desktop Interface"
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "shortcuts": [
+    {
+      "name": "Create Website",
+      "short_name": "Create",
+      "description": "Start building your business website",
+      "url": "/form",
+      "icons": [
+        {
+          "src": "/shortcut-create.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "View Examples",
+      "short_name": "Examples",
+      "description": "See example websites",
+      "url": "/examples",
+      "icons": [
+        {
+          "src": "/shortcut-examples.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

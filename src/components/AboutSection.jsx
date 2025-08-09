@@ -38,33 +38,33 @@ const AboutSection = () => {
   const features = [
     {
       icon: Zap,
-      title: "Lightning Fast Setup",
-      description: "Create your business website in under 2 minutes through WhatsApp - no coding required.",
+      title: "Instant Website Creation",
+      description: "Built specifically for Indian businesses - from local services in Delhi to restaurants in Kolkata. Get online in 2 minutes via WhatsApp.",
       stats: "< 2 min"
     },
     {
       icon: Smartphone,
-      title: "Mobile-First Design",
-      description: "Get a mobile-optimized website that works perfectly on all devices and platforms.",
+      title: "Mobile-First for India",
+      description: "Perfect for India's mobile-first audience. Your website will look stunning on every smartphone across urban and rural areas.",
       stats: "100% Mobile"
     },
     {
       icon: Rocket,
-      title: "Zero Technical Skills",
-      description: "We handle all the technical setup while you focus on your business.",
+      title: "No Technical Knowledge",
+      description: "Perfect for Indian entrepreneurs and small business owners. We handle hosting, domain, SSL - you focus on growing your business.",
       stats: "0% Tech"
     },
     {
       icon: Users,
-      title: "Global Reach",
-      description: "Multi-language support to reach customers worldwide.",
-      stats: "15+ Languages"
+      title: "Local Indian Support",
+      description: "Hindi and English customer support. Understand Indian business needs from GST integration to local payment methods.",
+      stats: "Hindi/English"
     },
   ];
 
   return (
     <section ref={sectionRef} className="py-20 bg-white">
-      <div className="container mx-auto px-6 max-w-8xl">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
 
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -73,14 +73,14 @@ const AboutSection = () => {
             Why Choose Pageon
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-            Build Your Business Website
-            <br />
-            <span className="text-blue-600">In Under 2 Minutes</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-4 px-4 sm:px-0">
+            Why 10,000+ Indian Businesses Choose PageOn
+            <br className="hidden sm:block" />
+            <span className="text-blue-600">Over Traditional Website Builders</span>
           </h2>
 
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Skip the complexity. Just answer a few questions on WhatsApp and watch your website come to life.
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4 sm:px-0">
+            From Mumbai startups to Chennai retailers, Indian businesses trust PageOn for fast, mobile-optimized websites. No technical knowledge needed - just WhatsApp us your business details and get online instantly!
           </p>
 
           {/* Trust indicators */}
@@ -103,7 +103,7 @@ const AboutSection = () => {
         {/* Features Grid */}
         <div className={`transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => {
               const Icon = feature.icon;
               const isActive = activeFeature === index;

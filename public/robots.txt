@@ -1,0 +1,42 @@
+# Robots.txt for PageOn - India's Best Website Builder
+User-agent: *
+Allow: /
+
+# Priority pages for crawling
+Allow: /
+Allow: /about
+Allow: /features
+Allow: /pricing
+Allow: /contact
+Allow: /auth
+Allow: /dashboard
+Allow: /form
+
+# Block admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /dashboard/private/
+Disallow: /_next/
+Disallow: /auth/reset/
+
+# Sitemap location
+Sitemap: https://pageon.in/sitemap.xml
+
+# Crawl delay for better server performance
+Crawl-delay: 1
+
+# Special instructions for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Allow search engines to index images
+User-agent: *
+Allow: /images/
+Allow: /icons/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$

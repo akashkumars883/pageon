@@ -3,7 +3,13 @@ import BusinessPage from "@/components/BusinessPage";
 
 // SEO Metadata function
 export async function generateMetadata({ params }) {
-  const slug = params?.slug?.toLowerCase()?.trim();
+  const { slug } = params;
+
+  if (!slug)
+    return {
+      title: "Page Not Found | Pageon",
+      description: "The requested page could not be found",
+    };
 
   const { data: business } = await supabase
     .from("businesses")
@@ -46,9 +52,9 @@ export const dynamic = "force-dynamic"; // disable static caching
 
 export default async function Page({ params }) {
   try {
-    const slug = params?.slug?.toLowerCase()?.trim();
+    const { slug } = params;
 
-    console.log("👉 SLUG PARAM RECEIVED:", slug);
+    if (!slug) throw new Error("No slug provided");
 
     const { data: business, error } = await supabase
       .from("businesses")
@@ -58,6 +64,12 @@ export default async function Page({ params }) {
 
     if (error) {
       console.error("❌ Supabase Error:", error.message);
+      return (
+        <div className="text-center text-red-600 p-8">
+          <h2 className="text-xl font-semibold">Something went worng</h2>
+          <p>{error.message}</p>
+        </div>
+      );
     }
 
     console.log("📦 BUSINESS FROM DB:", business);

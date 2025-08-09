@@ -433,12 +433,12 @@ export default function BusinessPage({ business = {} }) {
           }}
         ></div>
 
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 text-center">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center">
           <div className="space-y-4 sm:space-y-6">
-            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight px-2">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
               {businessData.name || "Your Business Name"}
             </h1>
-            <p className="text-sm sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               {businessData.description ||
                 "Professional services delivered with excellence"}
             </p>

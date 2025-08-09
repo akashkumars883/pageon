@@ -1,12 +1,12 @@
 // src/context/ThemeContext.js
 "use client";
-import { createContext, useContext } from "react";
+import React, { createContext, useContext, useState } from "react";
 
-const ThemeContext = React.createContext();
+const ThemeContext = createContext();
 
 // Custom Hook for Theme
-const useTheme = () => {
-  const context = React.useContext(ThemeContext);
+export const useTheme = () => {
+  const context = useContext(ThemeContext);
   if (!context) {
     throw new Error("useTheme must be used within a ThemeProvider");
   }
@@ -14,7 +14,7 @@ const useTheme = () => {
 };
 
 // Theme Provider Component
-const ThemeProvider = ({ children }) => {
+export const ThemeProvider = ({ children }) => {
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => setDarkMode(!darkMode);
